@@ -1,0 +1,118 @@
+doctype html
+html(lang="en")
+    head  
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title weirdo
+        style 
+            include ../static/style.css
+            include ../static/cart.css
+        script 
+            include ../static/index.js
+
+        //- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css', rel='stylesheet')
+
+        //- script
+        //-     include ../static/index.js
+    body 
+        div.header
+            div.container
+                div.navbar
+                    div.logo
+                        a(href="/") #[img(src="static/img/logo.png", alt="")]
+                    nav.nav
+                        ul#MenuItems
+                            li #[a(href="/") Home]
+                            li #[a(href="/product") Product]
+                            li #[a(href="") About]
+                            li #[a(href="/contact") Contact]
+                            li #[a(href="") Accounts]
+                    img(src="static/img/cart.png", width="30px" height="30px" alt="")
+
+                    img(src="static/img/menu.png", width="30px" height="30px" class="menu-logo" id="btn" onclick="togglehide()" alt="")
+
+        //-    cart item start here
+        div.cart
+            .cart-title
+                h2 Your Cart
+                .cart-content
+                    .cart-box
+                        img(src="static/img/product-1.jpg", alt="" class="cart-img")
+                        .detail-box
+                            .cart-product-title Red Printed T-Shirt
+                            .cart-price Rs.300
+                            input(type="number"  value="1" class="cart-quantity")
+                        //-remove-cart
+                        i.bx.bxs-trash-alt.cart-remove
+                    .cart-box
+                        img(src="static/img/product-2.jpg", alt="" class="cart-img")
+                        .detail-box
+                            .cart-product-title Shoes
+                            .cart-price Rs.900
+                            input(type="number"  value="1" class="cart-quantity")
+                        //-remove-cart
+                        i.bx.bxs-trash-alt.cart-remove
+       
+
+                .total
+                    .total-title Total
+                    .total-price Rs.0
+                button(class="btn-buy", type="button")
+                    | Buy Now
+    
+
+
+
+
+
+        .footer 
+            .container 
+                .row
+                    .footer-col-1 
+                        h3 Download Our App
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing 
+                        .app-logo 
+                            img(src="static/img/play-store.png", alt="") 
+                            img(src="static/img/app-store.png", alt="") 
+                             
+                    .footer-col-2 
+                        img(src="static/img/logo-white.png", alt="")
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis.
+                    .footer-col-3 
+                        h3 Useful Links 
+                        ul 
+                            li Coupon
+                            li Blog Post
+                            li Return Policy
+                            li Join Affiliate
+                    .footer-col-4
+                        h3 Follow us
+                        ul 
+                            li Facebook
+                            li Twitter
+                            li Instagram
+                            li snapchat
+            hr
+            p.copyright www.weirdo.com | All rights reserved               
+        script.
+
+            console.log("hello")
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight="0px"
+            function togglehide()
+            {
+          
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight="200px";
+                }
+                else{
+                    MenuItems.style.maxHeight="0px";
+                }
+            }
+
+                    
+                
+
