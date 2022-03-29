@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const port=8000;
+// const port=8000;
 
 // app.use(express.static('static',options))
 app.use('/static',express.static('static'))
@@ -31,6 +31,7 @@ app.get('/contact', (req, res)=>{
 });
 
 
-app.listen(port, ()=>{
-    console.log(`The application started succesfully on port ${port}`);
-});
+// app.listen(port, ()=>{
+//     console.log(`The application started succesfully on port ${port}`);
+// });
+app.listen(process.env.PORT || 8000)
