@@ -6,7 +6,6 @@ const app = express();
 
 // app.use(express.static('static',options))
 app.use('/static',express.static('static'))
-
 app.use(express.urlencoded())
 
 
